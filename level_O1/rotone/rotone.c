@@ -6,12 +6,14 @@ void ft_putchar(char c)
 }
 char ft_rotone(char c)
 {
-   if  (c == 90 )
+   if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+   {
+      if  (c == 90 )
         return (c = 65,c);
-   else if  (c == 122)
+      else if  (c == 122)
         return (c = 97,c);
-   else if  ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-        return (c + 1);
+      return (c + 1);
+   }
    return (c) ;
 }
 

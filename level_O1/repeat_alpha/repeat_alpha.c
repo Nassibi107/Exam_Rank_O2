@@ -1,6 +1,7 @@
 #include <inttypes.h>
 #include <unistd.h>
 
+
 int ft_index (int c)
 {
    if (c >= 65 && c <= 90)
@@ -9,19 +10,20 @@ int ft_index (int c)
       return (c - 97 + 1);
    return (1);
 }
-int main (int ac, char **av)
+
+
+int main (int ac,char **av)
 {
    if (ac == 2)
    {
       int i = 0;
-      while(av[1][i])
+      while (av[1][i])
       {
-         int c = ft_index(av[1][i]);
-         while (--c)
-            write(1, &av[1][i],1);
+         int r = ft_index(av[1][i]);
+         while(r--)
+            write(1,&av[1][i],1);
          i++;
       }
-    }
-   write(1,"\n",1);
+   }
+   write (1,"\n",1);
 }
-
